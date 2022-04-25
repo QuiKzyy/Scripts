@@ -147,7 +147,7 @@ worlds:NewDropdown("Teleport", "DropdownInf", teleports, function(currentOption)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82, 31, -760) else
      if _G.Location == "Cave" then 
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(416, 9, -334) else
-end end end end end end end end end end end end end end end)
+end end end end end end end end end end end end end end end end)
 
 
 

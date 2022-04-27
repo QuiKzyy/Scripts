@@ -12,11 +12,11 @@ local Window = Library.CreateLib("Roblox", "Synapse")
 local Tab = Window:NewTab("Scripts")
 local Section = Tab:NewSection("Autofarm")
 
-Section:NewButton("Collect Easter Eggs", "ButtonInfo", function()
+Section:NewButton("Collect Easter Eggs Quest", "Collects all the easter eggs from the easter quest and rewards you with a pet and some boosts", function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Forest.Forest.Leaves.CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Snowman.Snowman.Main.CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Fire.Fire["Meshes/vulcaonegg1_Cylinder"].CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Atlantis.Atlantis.part.CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Toxic.Toxic["Meshes/toxicegg_egg.002"].CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Cave.Cave["Meshes/easteregg1_egg.001"].CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Alien.Note.CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Alien.Note2.CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Alien.Note3.CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Scripts.EggHunt.Cave.Cave["Meshes/easteregg1_egg.001"].CFrame;wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(390,4,695)wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(384,4,691)wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(371,4,676)wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(387,5,675)wait(0.3)local a=game:GetService('VirtualUser')a:CaptureController()a:SetKeyDown('0x65')wait(0.1)a:SetKeyUp('0x65')wait(1)game:GetService("ReplicatedStorage").Events.Codes:FireServer("834519-385-3092")game:GetService("ReplicatedStorage").Events.EggHunt:FireServer()
 end)
 
-Section:NewToggle("1500x Boost Loop", "ToggleInfo", function(state)
+Section:NewToggle("1500x Boost Loop", "Gives a 1500x click boost in all worlds", function(state)
     _G.ClickLoop = state
  while _G.ClickLoop == true do 
     game:GetService("ReplicatedStorage").Events.WorldBoost:FireServer("Cave")
@@ -24,7 +24,7 @@ Section:NewToggle("1500x Boost Loop", "ToggleInfo", function(state)
 
 
 
-Section:NewToggle("Click", "ToggleInfo", function(state)
+Section:NewToggle("Auto Click", "Auto Clicks", function(state)
    _G.Toggle = state
 while _G.Toggle == true do 
 game:GetService("ReplicatedStorage").Events.Click3:FireServer()
@@ -44,11 +44,11 @@ local list = {
     "Easter Egg";  
 }
 
-Section:NewDropdown("Select Egg", "DropdownInf", list, function(currentOption)
+Section:NewDropdown("Select Egg", "Select the egg you desire to farm", list, function(currentOption)
     _G.SelectedEgg = currentOption
 end)
 
-Section:NewToggle("Auto Hatch", "ToggleInfo", function(state)
+Section:NewToggle("Auto Hatch", "Enable the auto hatch function", function(state)
     _G.Hatch = state
     while _G.Hatch == true do
         if _G.SelectedEgg == "100 Egg" then
@@ -87,7 +87,7 @@ Section:NewToggle("Auto Hatch", "ToggleInfo", function(state)
             
         end end end end end end end end end end end end end)
 
-        Section:NewToggle("Triple Egg", "ToggleInfo", function(state)
+        Section:NewToggle("Triple Egg", "Select if u want to open 3 eggs at once", function(state)
             if state == true then
                 _G.TripleEgg = "Triple" else if state == false then _G.TripleEgg = "Single"
             
@@ -96,7 +96,7 @@ Section:NewToggle("Auto Hatch", "ToggleInfo", function(state)
 
 
 local teleports = Window:NewTab("Teleports")
-local worlds = teleports:NewSection("Worlds")
+local worlds = teleports:NewSection("Teleport tab")
 
 local teleports = {
     "Spawn";
@@ -115,7 +115,7 @@ local teleports = {
     "Spooky";
     "Cave"
 }
-worlds:NewDropdown("Teleport", "DropdownInf", teleports, function(currentOption)
+worlds:NewDropdown("Teleport", "Select the world you want to teleport to", teleports, function(currentOption)
     _G.Location = currentOption
     if _G.Location == "Spawn" then 
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225, 29, 66) else
@@ -148,6 +148,15 @@ worlds:NewDropdown("Teleport", "DropdownInf", teleports, function(currentOption)
      if _G.Location == "Cave" then 
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(416, 9, -334) else
 end end end end end end end end end end end end end end end end)
+
+worlds:NewToggle("Auto Collect Easter Eggs", "Collects eggs form the easter world", function(state)
+    _G.loops = state
+while wait(0.1) do 
+    if _G.loops == true then
+for i,v in pairs(game:GetService("Workspace").Scripts.Easter.Eggs.Storage:GetDescendants()) do 
+    if v:IsA("Part") and v.Name == "Hitbox" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+end end end end end)
 
 
 
